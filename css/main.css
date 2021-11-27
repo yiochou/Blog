@@ -1,7 +1,10 @@
 /* Color customization */
 :root {
+  --font-color: #666;
+  --font-dark: #333;
+  --background-color: #fffafa;
   --primary: #f9c412;
-  --primary-dark: #e7bf60;
+  --primary-light: #ffda5f;
 }
 
 .test-dead-code-elimination-sentinel {
@@ -62,6 +65,7 @@ share-widget div {
 }
 
 share-widget button {
+  background-color: var(--primary);
   margin: 0;
 }
 
@@ -99,7 +103,7 @@ header aside {
 
 #reading-progress {
   z-index: 1;
-  background-color: var(--primary);
+  border-bottom: 1px solid var(--primary);
   width: 100vw;
   position: absolute;
   left: 0;
@@ -273,6 +277,7 @@ body {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+  color: var(--font-dark);
 }
 hr {
   box-sizing: content-box;
@@ -408,11 +413,13 @@ h1 {
   font-size: 3em;
   line-height: 1.25;
   margin-bottom: 0.5em;
+  color: var(--font-dark);
 }
 h2 {
   font-size: 2.5em;
   line-height: 1.2;
   margin-bottom: 0.6em;
+  color: var(--font-dark);
 }
 h3 {
   font-size: 2em;
@@ -635,7 +642,7 @@ kbd {
   color: #7ec699;
 }
 mark {
-  background: #f9c412;
+  background: var(--primary);
   padding: 0 0.3em;
 }
 h1,
@@ -652,11 +659,7 @@ h6 {
   font-style: italic;
 }
 a {
-  color: #f9c412;
   text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
 }
 small {
   color: #ccc;
@@ -774,7 +777,7 @@ button[disabled],
 input[type="reset"][disabled],
 input[type="submit"][disabled] {
   background: #e6e6e6;
-  color: #404040;
+  color: var(--primary);
   cursor: not-allowed;
 }
 button:not([disabled]),
@@ -834,8 +837,8 @@ video {
 }
 body {
   font-family: var(--font-family);
-  background: #181818;
-  color: #eee;
+  background: var(--background-color);
+  color: var(--font-color);
 }
 section {
   margin-left: auto;
@@ -881,11 +884,12 @@ header p {
 }
 header nav {
   position: fixed;
+  font-size: 1.1em;
   top: 0;
   left: 0;
   width: 100vw;
-  padding: 0.375em 1.5em;
-  background: hsla(0, 0%, 100%, 0.9);
+  padding: 0.75em 1.5em;
+  background: #fff;
   font-weight: 200;
   text-align: right;
 }
@@ -900,7 +904,7 @@ header nav a {
   font-weight: 700;
   text-decoration: none;
   font-family: var(--font-family);
-  color: #181818;
+  color: var(--font-color);
   margin-left: 1.5em;
 }
 header nav a:first-of-type {
@@ -919,12 +923,9 @@ header nav label {
 main {
   max-width: 70rem;
   margin: 0 auto;
-  border-top: 0.5px solid #ccc;
 }
 footer {
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
-  padding: 3em;
+  padding: 2em;
   text-align: center;
 }
 footer > * {
@@ -1098,15 +1099,15 @@ button:not([disabled]) {
 input[type="submit"]:hover,
 button[type="submit"]:hover,
 button:not([disabled]):hover {
-  background: var(--primary-dark);
+  background: var(--primary-light);
 }
 
 dd + dt {
-  border-top: 1px solid var(--primary);
+  border-top: 1px solid var(--font-color);
 }
 
 blockquote {
-  border-left: 1px solid var(--primary);
+  border-left: 1px solid var(--font-color);
 }
 
 mark {
@@ -1114,9 +1115,28 @@ mark {
 }
 
 a {
-  color: var(--primary);
+  color: var(--font-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
+  background: var(--font-color);
+}
+
+.post_card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #666;
+}
+.post_card a:hover {
+  color: var(--font-dark);
+}
+.post_card__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.post_card__title {
+  margin: 0
 }

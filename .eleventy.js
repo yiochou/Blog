@@ -56,6 +56,7 @@ const localImages = require("./third_party/eleventy-plugin-local-images/.elevent
 const CleanCSS = require("clean-css");
 const GA_ID = require("./_data/metadata.json").googleAnalyticsId;
 const { cspDevMiddleware } = require("./_11ty/apply-csp.js");
+const { extractExcerpt } = require("./_11ty/excerpt");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
@@ -227,6 +228,8 @@ module.exports = function (eleventyConfig) {
       );
     }
   });
+
+  eleventyConfig.addShortcode("excerpt", (article) => extractExcerpt(article));
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
