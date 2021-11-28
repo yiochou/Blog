@@ -1,10 +1,10 @@
 /* Color customization */
 :root {
-  --font-color: #666;
-  --font-dark: #333;
-  --background-color: #fffafa;
-  --primary: #f9c412;
-  --primary-light: #ffda5f;
+  --font-color: #595959;
+  --font-dark: #4d4d4d;
+  --background-color: #F6EFE4;
+  --primary: #e1c51e;
+  --primary-light: #e9d456;
 }
 
 .test-dead-code-elimination-sentinel {
@@ -38,9 +38,9 @@ header nav {
   --main-width: calc(100vw - 3em);
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 42.5em) {
   :root {
-    --main-width: calc(37.5em - 3em);
+    --main-width: calc(42.5em - 3em);
   }
 }
 /*! purgecss end ignore */
@@ -74,7 +74,8 @@ share-widget button:active {
 }
 
 dialog {
-  background-color: #8dff80;
+  color: var(--font-color);
+  background-color: #1ee1c5;
   position: fixed;
   opacity: 0.9;
   z-index: 1000;
@@ -683,6 +684,9 @@ dt {
     flex-grow: 1;
     page-break-before: auto;
   }
+  header nav a:last-of-type {
+    margin-right: 0!important;
+  }
   x:-moz-any-link {
     display: table-cell;
   }
@@ -871,7 +875,7 @@ header label {
 }
 header {
   padding: 4.5em 1.5em 3em;
-  width: 37.5em;
+  width: 42.5em;
   margin: 0 auto;
   text-align: center;
   max-width: 100%;
@@ -911,10 +915,10 @@ header nav a:first-of-type {
   margin-left: auto;
 }
 header nav a:last-of-type {
-  margin-right: 1.5em;
+  margin-right: 0.5em;
 }
 header nav label {
-  color: #000;
+  color: var(--font-dark);
   cursor: pointer;
   margin: 0;
   font-style: normal;
@@ -941,7 +945,7 @@ footer p {
 article {
   max-width: 100%;
   padding: 1.5em;
-  width: 37.5em;
+  width: 42.5em;
   margin: 0 auto;
 }
 ol,
