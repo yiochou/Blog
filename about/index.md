@@ -5,5 +5,5 @@ templateClass: tmpl-post
 eleventyNavigation:
   key: About
   order: 3
-  forwardTo: https://www.yiochou.com
+  forwardTo: https://yiochou.com
 ---
